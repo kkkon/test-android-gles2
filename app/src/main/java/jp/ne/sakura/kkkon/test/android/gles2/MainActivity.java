@@ -9,6 +9,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
+import jp.ne.sakura.kkkon.lib.android.mgd.CheckMGD;
+
 public class MainActivity extends Activity
 {
     private static final String TAG = "MainActivity";
@@ -20,6 +22,8 @@ public class MainActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        CheckMGD.checkMGDtargetSdkVersion( this );
 
         final ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
         if ( null != am )

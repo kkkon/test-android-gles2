@@ -19,6 +19,25 @@ android {
         }
     }
 
+
+    flavorDimensions 'api'
+
+    productFlavors {
+        api25 {
+            dimension 'api'
+            minSdkVersion 10
+            targetSdkVersion 25
+            applicationIdSuffix '.api25'
+            versionNameSuffix '-targetApi25'
+        }
+        api26 {
+            dimension 'api'
+            minSdkVersion 10
+            targetSdkVersion 26
+            applicationIdSuffix '.api26'
+            versionNameSuffix "-targetApi26"
+        }
+    }
 }
 
 dependencies {
